@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de memoria</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer charset="utf-8"></script>
+</head>
+
+<body>
+
+    <div id="setup" class="setup-container">
+        <h3 class="title">Juego de Memoria</h3>
+        <div id="playerName" class="input-group">
+            <label for="name">Nombre del Jugador:</label>
+            <input type="text" id="name" placeholder="Introduce tu nombre">
+        </div>
+        <div id="levelSelection" class="input-group">
+            <label for="level">Selecciona Nivel:</label>
+            <select id="level">
+                <option value="1">Nivel 1 (8 parejas)</option>
+                <!-- Otros niveles en el futuro -->
+            </select>
+        </div>
+        <button class="btn-start" onclick="startGame()">Iniciar Juego</button>
+    </div>
+
+    <div id="game" style="display:none;">
+        <div class="game-info">
+            <h3>Puntuación: <span id="result"></span></h3>
+            <p>Tiempo: <span id="timer">00:00</span></p>
+            <p>Parejas Encontradas: <span id="pairsFound">0</span></p>
+            <p>Parejas Restantes: <span id="pairsLeft">8</span></p>
+            <p>Vidas: <span id="lives">8</span></p>
+            <button class="btn-start" onclick="window.location.href='galeria.html'">Galería</button>
+            <button class="btn-start" onclick="window.location.href='posiciones.html'">Tabla de Posiciones</button>
+            <button class="btn-start" onclick="window.location.href='informacion.html'">Información</button>
+        </div>
+        <div class="grid"></div>
+    </div>
+
+</body>
+
+</html>

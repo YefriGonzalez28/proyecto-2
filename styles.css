@@ -1,0 +1,195 @@
+/* styles.css */
+body {
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0f0f0f;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+h3.title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 0 #000;
+}
+
+#setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #ffcc00;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  background-color: #1a1a1a;
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #ffcc00;
+  max-width: auto;
+}
+
+#playerName,
+#levelSelection {
+  margin: 15px 0;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+}
+
+button.btn-start {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #ffcc00;
+  color: #000;
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button.btn-start:hover {
+  background-color: #ffc107;
+  transform: scale(1.1);
+}
+
+#game {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1px;
+  margin-right: 2px;
+  background-color: #1a1a1a;
+  font-size: 15px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 600px;
+  height: 600px;
+  background-color: #8a741f;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.6s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;*/
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.card .back-face {
+  transform: rotateY(180deg);
+}
+
+p {
+  margin: 5px 0;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-gallery p {
+  font-size: 11px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 0 #000;
+  border-radius: 1px;
+  margin: 2px;
+  border: 1px solid #ddd;
+}
+
+/* Media Queries para pantallas pequeñas */ 
+@media (max-width: 600px) { 
+  h3.title { font-size: 1.5rem; } 
+
+  .grid { 
+    grid-template-columns: repeat(2, 1fr);
+     width: 300px; 
+     height: 300px; } 
+     
+  .image-item { width: 100px; } 
+  
+  button.btn-start { font-size: 1rem; 
+    padding: 8px 16px; 
+  } 
+  
+  .input-group label, .input-group input, .input-group select { font-size: 1rem; } 
+  
+  #setup, #game, #gallery, #leaderboard, #info { width: 90%; padding: 10px; }
+}
+/* Fuente de videojuego retro */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
